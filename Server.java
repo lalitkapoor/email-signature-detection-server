@@ -15,11 +15,14 @@ public class Server extends Verticle {
 
   public static String page = "<html>"
   + "<head></head>"
-  + "<body><h1>Email Signature Detection</h1><form method='POST'>"
+  + "<body><h1>Email Signature Detection</h1>"
+  + "<a target='_blank' href='https://www.github.com/lalitkapoor/email-signature-detection-server'>github</a>"
+  + "<form method='POST'>"
   + "<textarea name='demobox' rows=40 cols=80 placeholder='paste email in here'></textarea>"
   + "<br /><input type='submit' />"
   + "</form></body>"
   + "</html>";
+  
   public void start() {
     vertx.createHttpServer().requestHandler(new Handler<HttpServerRequest>() {
       public void handle(final HttpServerRequest req) {
